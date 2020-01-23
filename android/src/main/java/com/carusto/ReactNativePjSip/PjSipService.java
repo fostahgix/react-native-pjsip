@@ -351,7 +351,10 @@ public class PjSipService extends Service {
             case PjActions.ACTION_START:
                 handleStart(intent);
                 break;
-
+            case PjActions.ACTION_STOP:
+                stopForeground(true);
+                stopSelf();
+                break;
             // Account actions
             case PjActions.ACTION_CREATE_ACCOUNT:
                 handleAccountCreate(intent);
