@@ -38,7 +38,7 @@ public class PjSipModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void stop() {
-        Intent intent = PjActions.getStopIntent(getReactApplicationContext());
+        Intent intent = PjActions.createStopIntent(getReactApplicationContext());
         getReactApplicationContext().startService(intent);
     }
 
